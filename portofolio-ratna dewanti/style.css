@@ -1,0 +1,147 @@
+html{
+    overflow-x: hidden;
+}
+/* NAVBAR */
+#main-navbar{
+    z-index: 100; /* Agar logo tidak tertutup slider */
+}
+
+.navbar {
+    height: 65px; /* Sesuaikan dengan desain navbar */
+}
+
+#main-navbar a{
+    border-bottom: 3px solid #212529; /*warna pada navbar*/
+}
+#main-navbar a:hover, #main-navbar .active{ /*warna pada garis di navbar*/
+    border-bottom-color: #B82132;
+    transition: border-color 500ms;
+}
+
+.main-logo{
+    height: 50px;
+    text-transform: uppercase;
+}
+/* NAVBAR END */
+
+
+/*  MAIN SLIDER - Halaman Home */
+#main-slide{
+    background-image: url('img/backg.jpg');
+}
+
+#main-slide { 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+#main-slide .container {
+    display: flex; /* Menggunakan Flexbox */
+    flex-direction: column; /* Mengatur arah kolom untuk tampilan kecil */
+    justify-content: center; /* Menyelaraskan item secara vertikal */
+    height: 100%; /* Mengisi tinggi kontainer */
+}
+
+.home-img {
+    flex: 1; /* Mengambil ruang yang tersedia */
+    display: flex; /* Menggunakan Flexbox untuk gambar */
+    justify-content: flex-start; /* Menyelaraskan gambar ke kanan */
+}
+#main-slide img{
+
+        width: auto; /* Atur lebar otomatis */
+        height: 100%; /* Atur tinggi sesuai kontainer */
+        max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan */
+        object-fit: cover; /* Atur gambar agar tidak terdistorsi */
+}
+
+#main-slide h3{
+    font-size: 35px;
+}
+#main-slide p{
+    font-size: 22px;
+}
+.home-content{
+    text-align: center;
+}
+
+/* MAIN SLIDE END */
+
+/* ABOUT */
+
+.row img{
+    float:right;
+    margin-right: 10px;
+    height: 80%;
+}
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-weight: 600;
+  }
+.box-container .box p{
+    text-transform: none;
+  }
+.box-container .box p span{
+    color:#B82132;
+  }
+
+/* ABOUT END */
+
+
+
+#skill .col .box-container {
+    display: flex;
+    justify-content: center; /* Untuk meratakan konten secara horizontal */
+    align-items: center; /* Untuk meratakan konten secara vertikal */
+    flex-wrap: wrap; /* Agar kotak dapat membungkus jika diperlukan */
+    gap: 200px;
+}
+
+.col .box-container .box {
+    margin: 0 15px; /* Memberikan jarak antar kotak */
+    text-align: center;
+}
+
+#img-education{
+        width: auto; /* Atur lebar otomatis */
+        height: 100%; /* Atur tinggi sesuai kontainer */
+        max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan */
+        object-fit: cover; /* Atur gambar agar tidak terdistorsi */
+}
+
+
+.quick div a{
+    text-decoration: none;
+}
+
+#about, #skill, #education, #contact{
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Non aktifkan XXL Breakpoint */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    #main-slide .container {
+        flex-direction: row; /* Mengubah arah kolom menjadi baris untuk tampilan besar */
+    }
+
+    .home-content {
+        flex: 1; /* Mengambil ruang yang tersedia */
+        text-align: left;
+    }
+
+    .home-img {
+        flex: 1; /* Mengambil ruang yang tersedia */
+        display: flex; /* Menggunakan Flexbox untuk gambar */
+        justify-content: flex-end; /* Menyelaraskan gambar ke kanan */
+    }
+}
